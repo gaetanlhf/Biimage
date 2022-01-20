@@ -4,6 +4,6 @@
     "bootstrap-icons": "^1.7.2"
   },
   "scripts": {
-    "build": "npm install"
+    "build": "npm install && python generate_icon_list.py"
   }
 }
