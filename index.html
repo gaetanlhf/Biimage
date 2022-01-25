@@ -1,0 +1,100 @@
+<!-- bi2png
+Copyright (C) 2022 Gaëtan LE HEURT-FINOT
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>. -->
+
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Bootstrap Icons to PNG converter</title>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="./node_modules/choices.js/public/assets/styles/choices.min.css" rel="stylesheet">
+    <link href="./node_modules/@simonwep/pickr/dist/themes/nano.min.css" rel="stylesheet">
+    <link href="./node_modules/github-fork-ribbon-css/gh-fork-ribbon.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column h-100">
+    <a class="github-fork-ribbon left-top" href="https://github.com/gaetanlhf/bi2png" data-ribbon="Fork me on GitHub" title="Fork me on GitHub" aria-hidden="true">Fork me on GitHub</a>
+    <div class="d-flex flex-column h-100">
+        <header class="container pt-3">
+            <div class="d-flex flex-column align-items-sm-center align-items-end pb-3 border-bottom">
+                <a class="d-flex align-items-center text-dark text-decoration-none" href="/"><svg class="d-block" height="32" role="img" viewbox="0 0 118 94" width="40" xmlns="http://www.w3.org/2000/svg">
+                        <title>Bootstrap</title>
+                        <path clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor" fill-rule="evenodd"></path>
+                    </svg> <span class="fs-4 mx-2">Bootstrap Icons <br class="d-md-none"> to PNG converter</span></a>
+            </div>
+        </header>
+        <main class="container flex-shrink-0">
+            <div class="container">
+                <div class="px-3 my-3 text-center">
+                    <div class="d-block mx-auto align-items-center">
+                        <i aria-hidden="true" class="bi bi-bootstrap-fill fs-1 mx-2"></i> <i aria-hidden="true" class="bi bi-arrow-right-square-fill fs-1 mx-2"></i> <i aria-hidden="true" class="bi bi-file-earmark-image-fill fs-1 mx-2"></i>
+                    </div>
+                    <h1 class="display-5 fw-bold">Easily turn any Bootstrap Icons into a PNG file</h1>
+                    <div class="col-lg-6 mx-auto">
+                        <p class="lead mb-4">Select your icon, its size and its color in all simplicity.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 pb-3">
+                        <div class="mb-3">
+                            <label class="form-label" for="iconName">Icon name:</label> <select class="form-select" id="iconName" onchange="updatePreview()">
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="iconSize">Icon size (in px):</label> <input class="form-range" id="iconSizeRange" min="1" max="1000" oninput="updateIconSize(this)" type="range"> <input class="form-control" id="iconSizeInput" min="1" max="1000" oninput="updateIconSize(this)" placeholder="Icon size" type="number">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="iconColor">Icon color:</label> <input id="iconColor" type="color">
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-primary mt-3" onclick="downIcon()" type="button"><i aria-hidden="true" class="bi bi-cloud-arrow-down-fill"></i> Download</button>
+                        </div>
+                    </div>
+                    <div class="d-flex col-md-6 col-sm-12 justify-content-center align-items-center pb-3">
+                        <div id="preview"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+                <div aria-atomic="true" aria-live="assertive" class="toast align-items-center text-white bg-danger" id="errorToast" role="alert">
+                    <div class="d-flex">
+                        <div class="toast-body">
+                            Please choose an icon before downloading it.
+                        </div><button aria-label="Close" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" type="button"></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="container py-3 mt-lg-auto mt-4 text-muted border-top">
+            <div class="d-flex flex-column align-items-center">
+                <span class="text-muted">Made with <i aria-hidden="true" class="bi bi-heart-fill heart"></i> by Gaëtan L. H.-F.
+            </div>
+        </footer>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/@simonwep/pickr/dist/pickr.min.js"></script>
+    <script src="node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="node_modules/pablo/pablo.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
