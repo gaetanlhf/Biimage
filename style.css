@@ -1,0 +1,88 @@
+/* bi2png
+Copyright (C) 2022 Gaëtan LE HEURT-FINOT
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>. */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+#preview {
+    background-image: url(./background.png);
+    width: 100px;
+    height: 100px;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+#preview>svg {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+@media (max-width: 1200px) {
+    #preview {
+        max-width: 250px !important;
+        max-height: 250px !important;
+    }
+
+    #preview>svg {
+        max-width: 250px !important;
+        max-height: 250px !important;
+    }
+}
+
+.align-items-sm-center {
+    align-items: center !important;
+}
+
+#preview svg:not(:first-child) {
+    display: none;
+}
+
+.choices__inner {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da !important;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.choices__list--single {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.choices .choices__list {
+    z-index: 99999;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.heart {
+    color: red;
+}
+
+.github-fork-ribbon:before {
+    background-color: rgb(33, 37, 41);
+}
