@@ -14,6 +14,17 @@
 // You should have received a copy of the GNU Affero General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css"
+import '@simonwep/pickr/dist/themes/nano.min.css';
+import "choices.js/public/assets/styles/choices.min.css"
+import "github-fork-ribbon-css/gh-fork-ribbon.css"
+import '../css/style.css'
+
+window.bootstrap = require('bootstrap/dist/js/bootstrap.bundle.js');
+import Pickr from "@simonwep/pickr";
+import Choices from "choices.js";
+
 const pickr = Pickr.create({
     el: "#iconColor",
     theme: "nano",
@@ -79,7 +90,7 @@ choice.setChoices(function() {
 });
 
 var iconGenerated;
-const iconPath = "./node_modules/bootstrap-icons/icons/";
+const iconPath = "./icons/";
 var filename;
 var preview = document.getElementById("preview");
 var iconSize = 100;
@@ -122,6 +133,7 @@ function updatePreview() {
             filename = selectedText;
             preview.innerHTML = "";
             var colorString = "#"
+            var i = 0;
             for (i = 0; i < iconColor.length; i++) {
                 colorString += iconColor[i];
             }
@@ -136,3 +148,8 @@ function updatePreview() {
         }
     }
 }
+
+window.updateIconSize = updateIconSize;
+window.updateIconColor = updateIconColor;
+window.updatePreview = updatePreview;
+window.downIcon = downIcon;
