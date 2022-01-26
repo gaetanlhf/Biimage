@@ -21,13 +21,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>. -->
     <meta charset="UTF-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#111111" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#eeeeee" media="(prefers-color-scheme: dark)">
     <title>Bootstrap Icons to PNG converter</title>
-    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="./node_modules/choices.js/public/assets/styles/choices.min.css" rel="stylesheet">
-    <link href="./node_modules/@simonwep/pickr/dist/themes/nano.min.css" rel="stylesheet">
-    <link href="./node_modules/github-fork-ribbon-css/gh-fork-ribbon.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="bundle.css" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -89,12 +87,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>. -->
             </div>
         </footer>
     </div>
-
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="node_modules/@simonwep/pickr/dist/pickr.min.js"></script>
-    <script src="node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
-    <script src="node_modules/pablo/pablo.js"></script>
-    <script src="script.js"></script>
+    <script src="bundle.js"></script>
+    <script src="pablo.js"></script>
 </body>
 
 </html>
