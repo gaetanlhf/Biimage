@@ -16,12 +16,12 @@
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css"
-import '@simonwep/pickr/dist/themes/nano.min.css';
+import "@simonwep/pickr/dist/themes/nano.min.css";
 import "choices.js/public/assets/styles/choices.min.css"
 import "github-fork-ribbon-css/gh-fork-ribbon.css"
-import '../css/style.css'
+import "../css/style.css"
 
-window.bootstrap = require('bootstrap/dist/js/bootstrap.bundle.js');
+window.bootstrap = require("bootstrap/dist/js/bootstrap.bundle.js");
 import Pickr from "@simonwep/pickr";
 import Choices from "choices.js";
 
@@ -63,7 +63,7 @@ pickr.on("init", instance => {
     });
 });
 
-pickr.on('save', (color, instance) => {
+pickr.on("save", (color, instance) => {
     instance.hide();
     updateIconColor();
 });
