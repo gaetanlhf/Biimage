@@ -114,13 +114,20 @@ function updateIconColor() {
     updatePreview();
 }
 
-function downIcon() {
+function downIcon(type) {
     if (typeof iconGenerated == "undefined") {
         var errorToast = document.getElementById("errorToast");
         var toast = new bootstrap.Toast(errorToast);
         toast.show();
     } else {
-        iconGenerated.download("png", filename + ".png");
+        switch (type) {
+            case 0:
+                iconGenerated.download("png", filename + ".png");
+                break;
+            case 1:
+                iconGenerated.download("svg", filename + ".svg");
+                break;
+        }
     }
 }
 
