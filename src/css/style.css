@@ -1,4 +1,4 @@
-/* bi2png
+/* Biimage
 Copyright (C) 2022 Gaëtan LE HEURT-FINOT
 
 This program is free software: you can redistribute it and/or modify
@@ -42,10 +42,6 @@ html {
         max-width: 250px !important;
         max-height: 250px !important;
     }
-}
-
-.align-items-sm-center {
-    align-items: center !important;
 }
 
 #preview svg:not(:first-child) {
