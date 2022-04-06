@@ -1,7 +1,7 @@
 {
-    "name": "bi2png",
-    "version": "1.0.0",
-    "description": "Easily turn any Bootstrap Icons into a PNG file.",
+    "name": "Biimage",
+    "version": "1.1.0",
+    "description": "Easily turn any Bootstrap Icons into an image file.",
     "main": "index.html",
     "dependencies": {
         "@babel/core": "^7.17.8",
@@ -17,6 +17,8 @@
         "cssnano": "^5.1.7",
         "file-loader": "^6.2.0",
         "github-fork-ribbon-css": "^0.2.3",
+        "html-loader": "^3.1.0",
+        "html-webpack-plugin": "^5.5.0",
         "mini-css-extract-plugin": "^2.6.0",
         "pablo": "github:premasagar/pablo",
         "postcss-loader": "^6.2.1",
@@ -28,7 +30,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/gaetanlhf/bi2png.git"
+        "url": "git+https://github.com/gaetanlhf/Biimage.git"
     },
     "keywords": [
         "Bootstrap",
@@ -41,7 +43,7 @@
     "author": "Gaëtan L. H.-F.",
     "license": "AGPL-3.0-or-later",
     "bugs": {
-        "url": "https://github.com/gaetanlhf/bi2png/issues"
+        "url": "https://github.com/gaetanlhf/Biimage/issues"
     },
-    "homepage": "https://github.com/gaetanlhf/bi2png#readme"
+    "homepage": "https://github.com/gaetanlhf/Biimage#readme"
 }
