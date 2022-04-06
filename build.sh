@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# bi2png
+# Biimage
 # Copyright (C) 2022 Gaëtan LE HEURT-FINOT
 #
 # This program is free software: you can redistribute it and/or modify
@@ -19,6 +19,6 @@
 mkdir dist
 npm install
 python generate_icon_list.py
-cp list.json ./src/js/pablo.js index.html ./dist
+cp list.json ./src/img/favicon.ico ./dist
 cp -r ./node_modules/bootstrap-icons/icons/ ./dist/icons/
 npm run build
