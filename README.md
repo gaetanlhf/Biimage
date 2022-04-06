@@ -2,14 +2,14 @@
 <h2 align="center">Biimage</h2>
 <p align="center">Easily turn any Bootstrap Icons into an image file </p>
 <p align="center">
-  [![Deploy to GitHub Pages](https://github.com/gaetanlhf/Biimage/actions/workflows/github-pages.yml/badge.svg)](https://github.com/gaetanlhf/Biimage/actions/workflows/github-pages.yml)
+    <a href="https://github.com/gaetanlhf/Biimage/actions/workflows/github-pages.yml"><img src="https://github.com/gaetanlhf/Biimage/actions/workflows/github-pages.yml/badge.svg" alt="Deploy to GitHub Pages"></a>
 </p>
 <p align="center">
-  <a href="#about">About</a> •
-  <a href="#features">Features</a> •
-  <a href="#build">Build</a> •
-  <a href="#credits">Credits</a> •
-  <a href="#license">License</a>
+    <a href="#about">About</a> •
+    <a href="#features">Features</a> •
+    <a href="#build">Build</a> •
+    <a href="#credits">Credits</a> •
+    <a href="#license">License</a>
 </p>
 
 ## About
