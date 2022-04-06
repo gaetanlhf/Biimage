@@ -1,2 +1,2 @@
-# bi2png
+# Biimage
  

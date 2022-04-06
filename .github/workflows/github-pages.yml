@@ -19,7 +19,7 @@ jobs:
       with:
         python-version: 3.9
 
-    - name: Build bi2png
+    - name: Build Biimage
       run: |
         bash build.sh
 
@@ -30,4 +30,4 @@ jobs:
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
         publish_dir: ./dist/
-        cname: bi2png.gaetan.me
+        cname: biimage.gaetan.me
