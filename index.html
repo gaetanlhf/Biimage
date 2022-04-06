@@ -67,28 +67,32 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>. -->
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6 col-sm-12 pb-3">
-                    <div class="mb-3">
-                        <label class="form-label" for="iconName">Icon name:</label> <select class="form-select" id="iconName" onchange="updatePreview()">
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="iconSize">Icon size (in px):</label> <input class="form-range" id="iconSizeRange" min="1" max="1000" oninput="updateIconSize(this)" type="range"> <input class="form-control" id="iconSizeInput" min="1" max="1000" oninput="updateIconSize(this)" placeholder="Icon size" type="number">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="iconColor">Icon color:</label> <input id="iconColor" type="color">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="download">Download:</label>
-                        <div class="d-grid gap-2 col-4">
-                            <button class="btn btn-primary" onclick="downIcon(0)" type="button"><i aria-hidden="true" class="bi bi-cloud-arrow-down-fill"></i> Download as png</button>
-                            <button class="btn btn-primary btn-sm" onclick="downIcon(1)" type="button"><i aria-hidden="true" class="bi bi-cloud-arrow-down-fill"></i> Download as svg</button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 pb-3">
+                        <div class="mb-3">
+                            <label class="form-label" for="iconName">Icon name:</label> <select class="form-select" id="iconName" onchange="updatePreview()">
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="iconSize">Icon size (in px):</label> <input class="form-range" id="iconSizeRange" min="1" max="1000" oninput="updateIconSize(this)" type="range"> <input class="form-control" id="iconSizeInput" min="1" max="1000" oninput="updateIconSize(this)" placeholder="Icon size" type="number">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="iconColor">Icon color:</label> <input id="iconColor" type="color">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="download">Download:</label>
+                            <div class="d-grid gap-2 col-4">
+                                <button class="btn btn-primary" onclick="downIcon(0)" type="button"><i aria-hidden="true" class="bi bi-cloud-arrow-down-fill"></i> Download as
+                                    png</button>
+                                <button class="btn btn-primary btn-sm" onclick="downIcon(1)" type="button"><i aria-hidden="true" class="bi bi-cloud-arrow-down-fill"></i> Download as
+                                    svg</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="d-flex col-md-6 col-sm-12 justify-content-center align-items-center pb-3">
-                    <div id="preview"></div>
+                    <div class="d-flex col-md-6 col-sm-12 justify-content-center align-items-center pb-3">
+                        <div id="preview"></div>
+                    </div>
                 </div>
             </div>
     </div>
@@ -97,6 +101,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>. -->
             <div class="d-flex">
                 <div class="toast-body">
                     Please choose an icon before downloading it.
+                </div><button aria-label="Close" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" type="button"></button>
+            </div>
+        </div>
+    </div>
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+        <div aria-atomic="true" aria-live="assertive" class="toast align-items-center text-white bg-success" id="successToast" role="alert">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Your image has been downloaded to your device.
                 </div><button aria-label="Close" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" type="button"></button>
             </div>
         </div>
