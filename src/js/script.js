@@ -116,10 +116,13 @@ function updateIconColor() {
 
 function downIcon(type) {
     if (typeof iconGenerated == "undefined") {
-        var errorToast = document.getElementById("errorToast");
-        var toast = new bootstrap.Toast(errorToast);
+        let errorToast = document.getElementById("errorToast");
+        let toast = new bootstrap.Toast(errorToast);
         toast.show();
     } else {
+        let successToast = document.getElementById("successToast");
+        let toast = new bootstrap.Toast(successToast);
+        toast.show();
         switch (type) {
             case 0:
                 iconGenerated.download("png", filename + ".png");
@@ -139,8 +142,8 @@ function updatePreview() {
         if (iconSize.length != "") {
             filename = selectedText;
             preview.innerHTML = "";
-            var colorString = "#"
-            var i = 0;
+            let colorString = "#"
+            let i = 0;
             for (i = 0; i < iconColor.length; i++) {
                 colorString += iconColor[i];
             }
