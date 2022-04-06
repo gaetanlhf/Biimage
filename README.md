@@ -2,7 +2,7 @@
 <h2 align="center">Biimage</h2>
 <p align="center">Easily turn any Bootstrap Icons into an image file </p>
 <p align="center">
-  [![Deploy to GitHub Pages](https://github.com/gaetanlhf/franceactu/actions/workflows/github-pages.yml/badge.svg)](https://github.com/gaetanlhf/Biimage/actions/workflows/github-pages.yml)
+  [![Deploy to GitHub Pages](https://github.com/gaetanlhf/Biimage/actions/workflows/github-pages.yml/badge.svg)](https://github.com/gaetanlhf/Biimage/actions/workflows/github-pages.yml)
 </p>
 <p align="center">
   <a href="#about">About</a> •
