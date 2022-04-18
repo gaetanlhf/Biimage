@@ -26,6 +26,7 @@ jobs:
         python generate_icon_list.py
         cp list.json ./src/img/favicon.ico ./dist
         cp -r ./node_modules/bootstrap-icons/icons/ ./dist/icons/
+        cp ./src/.htaccess ./dist/.htaccess
         npm run build
 
     - name: Uploading to the Web server

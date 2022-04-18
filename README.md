@@ -59,6 +59,13 @@ cp list.json ./src/img/favicon.ico ./dist
 cp -r ./node_modules/bootstrap-icons/icons/ ./dist/icons/
 ```
 
+### Copy `.htaccess` to `dist` folder
+
+If you want to enable redirection to HTTPS and block index display:
+```bash
+cp ./src/.htaccess ./dist/.htaccess
+```
+
 ### Building the project
 
 Execute the following command to build the project (HTML, CSS, JS, ...):
