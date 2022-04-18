@@ -16,11 +16,12 @@ This project solves this lack.
 
 ## Features
 
-- **Simple** and **lightweight**
-- **All Bootstrap Icons**
-- **Customisation** of the icon's **colour**
-- **Customisation** of the icon's **size**
-- **Export** in **png** or **svg** format
+- ✅ **All Bootstrap Icons**
+- ✅ **Customisation** of the icon's **colour**
+- ✅ **Customisation** of the icon's **size**
+- ✅ **Export** in **png** or **svg** format
+- ✨ A **simple** and **beautiful** interface
+- 🌙 An **elegant dark mode** activated according to the settings of your browser or operating system
 
 ## Deploy
 
