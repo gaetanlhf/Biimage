@@ -21,13 +21,18 @@ jobs:
 
     - name: Build Biimage
       run: |
-        bash build.sh
+        mkdir dist
+        npm install
+        python generate_icon_list.py
+        cp list.json ./src/img/favicon.ico ./dist
+        cp -r ./node_modules/bootstrap-icons/icons/ ./dist/icons/
+        npm run build
 
-    - name: Push to Github Pages
-      uses: peaceiris/actions-gh-pages@v3.6.1
+    - name: Uploading to the Web server
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
-        publish_dir: ./dist/
-        cname: biimage.gaetan.me
+        local-dir: ./dist/
+        server-dir: ${{ secrets.ftp_dir }}
+        server: ${{ secrets.ftp_server }}
+        username: ${{ secrets.ftp_username }}
+        password: ${{ secrets.ftp_password }}
