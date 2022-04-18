@@ -2,13 +2,9 @@
 <h2 align="center">Biimage</h2>
 <p align="center">Easily turn any Bootstrap Icons into an image file </p>
 <p align="center">
-    <a href="https://github.com/gaetanlhf/Biimage/actions/workflows/github-pages.yml"><img src="https://github.com/gaetanlhf/Biimage/actions/workflows/github-pages.yml/badge.svg" alt="Deploy to GitHub Pages"></a>
-</p>
-<p align="center">
     <a href="#about">About</a> •
     <a href="#features">Features</a> •
-    <a href="#build">Build</a> •
-    <a href="#credits">Credits</a> •
+    <a href="#deploy">Deploy</a> •
     <a href="#license">License</a>
 </p>
 
@@ -26,33 +22,45 @@ This project solves this lack.
 - **Customisation** of the icon's **size**
 - **Export** in **png** or **svg** format
 
-## Build
+## Deploy
 
-First check that you have **Node.js**, **npm** and **Python** installed on your machine.  
-Then, run:  
+### Install dependencies
+
+First check that you have **Node.js** and **npm** installed on your machine.
+Then, install **Node.js dependencies**
 ```bash
-./build.sh
+npm install
 ```
 
-## Credits
+### Generate icon list
 
-- [Bootstrap](https://getbootstrap.com/)
-- [Bootstrap Icons](https://icons.getbootstrap.com/)
-- [Choice.js](https://choices-js.github.io/Choices/)
-- [Pickr](https://simonwep.github.io/pickr/)
-- [Pablo](http://pablojs.com/)
-- [Fork me on GitHub CSS ribbon](https://simonwhitaker.github.io/github-fork-ribbon-css/)
-- [Webpack](https://webpack.js.org/)
-- [Babel](https://babeljs.io/)
-- [Babel Loader](https://github.com/babel/babel-loader)
-- [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin)
-- [postcss-loader](https://github.com/webpack-contrib/postcss-loader)
-- [css-loader](https://github.com/webpack-contrib/css-loader)
-- [cssnano](https://cssnano.co/)
-- [file-loader](https://github.com/webpack-contrib/file-loader)
-- [html-loader](https://github.com/webpack-contrib/html-loader)
-- [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
-- [cross-env](https://github.com/kentcdodds/cross-env)
+First check that you have **Python** installed on your machine.
+Then, run:
+```bash
+python generate_icon_list.py
+```
+
+### Create a `dist` folder
+
+Then create a folder for the files that will correspond to the compiled projects:
+```bash
+mkdir dist
+```
+
+### Copy icons and icon list to `dist` folder
+
+Now copy the icons and the icon list into the dist folder:
+```bash
+cp list.json ./src/img/favicon.ico ./dist
+cp -r ./node_modules/bootstrap-icons/icons/ ./dist/icons/
+```
+
+### Building the project
+
+Execute the following command to build the project (HTML, CSS, JS, ...):
+```bash
+npm run build
+```
 
 ## License
 
