@@ -28,6 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>. -->
     <meta name="apple-mobile-web-app-title" content="Biimage" />
     <meta name="theme-color" content="#212529" />
     <link rel="manifest" href="/src/manifest.webmanifest" />
+    <meta name="color-scheme" content="light dark">
     <link rel="icon" type="image/png" sizes="36x36" href="/src/img/android-chrome-36x36.png" />
     <link rel="icon" type="image/png" sizes="48x48" href="/src/img/android-chrome-48x48.png" />
     <link rel="icon" type="image/png" sizes="72x72" href="/src/img/android-chrome-72x72.png" />
@@ -50,7 +51,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>. -->
     <div class="d-flex flex-column h-100">
         <header class="container pt-3">
             <div class="d-flex flex-column align-items-center align-items-end pb-3 border-bottom">
-                <a class="d-flex align-items-center text-dark text-decoration-none" href="/"><span class="fs-4 mx-2">Biimage</span></a>
+                <a class="d-flex align-items-center text-dark text-decoration-none" href="/"><span id="name" class="fs-4 mx-2">Biimage</span></a>
             </div>
         </header>
         <main class="container flex-shrink-0">
@@ -58,7 +59,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>. -->
                 <div class="row p-4 pb-0 pt-lg-5 p-lg-5 align-items-center rounded-3 border shadow-lg">
                     <div class="text-center">
                         <div class="d-block mx-auto align-items-center">
-                            <svg width="36.75" height="49" viewBox="0 0 9.723 12.965" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <svg id="logo" width="36.75" height="49" viewBox="0 0 9.723 12.965" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707v5.586l-2.73-2.73a1 1 0 0 0-1.52.127l-1.889 2.644-1.769-1.062a1 1 0 0 0-1.222.15L2 12.292V2a2 2 0 0 1 2-2Zm5.5 1.5v2a1 1 0 0 0 1 1h2zm-1.498 4c1.568 1.242-3-2-3 0s-5.68-6.876 3 0z" style="fill:#212529;fill-opacity:1" transform="matrix(.81029 0 0 .81029 -1.62 0)" />
                                 <path d="M8.434 5.017 14 9.059v3.707C14 14.552 13.105 16 12 16H4c-1.105 0-2-1.448-2-3.234v-.474l3.578-5.784 2.56 2.484 2.434-3.16z" style="fill:#212529;fill-opacity:1;stroke-width:1.27165" transform="matrix(.81029 0 0 .81029 -1.62 0)" />
                                 <path style="opacity:.99;fill:#fff;stroke:#000;stroke-width:1.14998;stroke-opacity:0;paint-order:stroke fill markers" d="M21.944 2.441h8.146v9.948h-8.146z" transform="translate(-7.85 4.73) scale(.48017)" />

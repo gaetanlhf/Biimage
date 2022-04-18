@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Affero General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-dark-5/dist/css/bootstrap-dark.min.css"
 import "bootstrap-icons/font/bootstrap-icons.css"
 import "@simonwep/pickr/dist/themes/nano.min.css";
 import "choices.js/public/assets/styles/choices.min.css"
