@@ -1,29 +1,31 @@
 {
-    "name": "Biimage",
+    "name": "biimage",
     "version": "1.1.0",
     "description": "Easily turn any Bootstrap Icons into an image file.",
     "main": "index.html",
-    "dependencies": {
-        "@babel/core": "^7.17.8",
+    "devDependencies": {
+        "@babel/core": "^7.17.9",
         "@babel/preset-env": "^7.16.11",
-        "@simonwep/pickr": "^1.8.2",
-        "autoprefixer": "^10.4.4",
         "babel-loader": "^8.2.4",
-        "bootstrap": "^5.1.3",
-        "bootstrap-icons": "^1.8.1",
-        "choices.js": "^10.1.0",
+        "autoprefixer": "^10.4.4",
         "cross-env": "^7.0.3",
         "css-loader": "^6.7.1",
         "cssnano": "^5.1.7",
         "file-loader": "^6.2.0",
-        "github-fork-ribbon-css": "^0.2.3",
+        "postcss-loader": "^6.2.1",
+        "webpack": "^5.72.0",
+        "webpack-cli": "^4.9.2",
         "html-loader": "^3.1.0",
         "html-webpack-plugin": "^5.5.0",
-        "mini-css-extract-plugin": "^2.6.0",
-        "pablo": "github:premasagar/pablo",
-        "postcss-loader": "^6.2.1",
-        "webpack": "^5.71.0",
-        "webpack-cli": "^4.9.2"
+        "mini-css-extract-plugin": "^2.6.0"
+    },
+    "dependencies": {
+        "@simonwep/pickr": "^1.8.2",
+        "bootstrap": "^5.1.3",
+        "bootstrap-icons": "^1.8.1",
+        "choices.js": "^10.1.0",
+        "github-fork-ribbon-css": "^0.2.3",
+        "pablo": "github:premasagar/pablo"
     },
     "scripts": {
         "build": "cross-env NODE_ENV=production webpack --config webpack.config.js"
