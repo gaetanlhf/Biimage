@@ -2,9 +2,6 @@
 <h2 align="center">Biimage</h2>
 <p align="center">Easily turn any Bootstrap Icons into an image file </p>
 <p align="center">
-    <a href="https://github.com/gaetanlhf/Biimage/actions/workflows/deploy-web-server.yml"><img src="https://github.com/gaetanlhf/Biimage/actions/workflows/deploy-web-server.yml/badge.svg" alt="Deploy to Web server"></a>
-</p>
-<p align="center">
     <a href="#about">About</a> •
     <a href="#features">Features</a> •
     <a href="#deploy">Deploy</a> •
