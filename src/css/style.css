@@ -83,6 +83,11 @@ html {
     background-color: rgb(33, 37, 41);
 }
 
+.text-muted a {
+    text-decoration: none;
+    color: #9e9e9e !important;
+}
+
 @media (prefers-color-scheme: dark) {
     #name {
         color: #b1b1b1;
